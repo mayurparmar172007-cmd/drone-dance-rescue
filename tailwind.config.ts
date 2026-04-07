@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        drone: {
+          a: "hsl(var(--drone-a))",
+          b: "hsl(var(--drone-b))",
+        },
+        survivor: "hsl(var(--survivor))",
+        obstacle: "hsl(var(--obstacle))",
+        danger: "hsl(var(--danger))",
       },
       borderRadius: {
         lg: "var(--radius)",
