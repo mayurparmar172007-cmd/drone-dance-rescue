@@ -1,0 +1,44 @@
+tasks:
+  - name: easy
+    drones: 1
+    grid_size: 5
+    survivors: 1
+    obstacles: 2
+    battery: 20
+    max_steps: 40
+    danger_zones: 0
+
+  - name: medium
+    drones: 1
+    grid_size: 7
+    survivors: 2
+    obstacles: 5
+    battery: 18
+    max_steps: 60
+    danger_zones: 0
+
+  - name: hard
+    drones: 2
+    grid_size: 10
+    survivors: 3
+    obstacles: 12
+    battery: 30
+    max_steps: 100
+    danger_zones: 4
+
+rewards:
+  valid_move: 1
+  unexplored_bonus: 2
+  scan_detect: 10
+  rescue_survivor: 50
+  mission_complete: 100
+  hit_obstacle: -10
+  invalid_move: -5
+  wasted_step: -1
+  scan_empty: -2
+  battery_depleted: -20
+
+api:
+  reset: "POST /reset"
+  step: "POST /step"
+  state: "GET /state"
