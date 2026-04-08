@@ -1,10 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "drone-dance-rescue"
 version = "1.0.0"
-description = "OpenEnv drone rescue simulation environment"
+description = "OpenEnv drone rescue simulation backend"
 readme = "README.md"
-requires-python = ">=3.10"
-
+requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.115.0",
     "uvicorn[standard]>=0.30.0",
@@ -15,7 +18,7 @@ dependencies = [
 ]
 
 [project.scripts]
-server = "app:app"
+server = "app:main"
 
 [tool.setuptools]
 py-modules = ["app", "env", "tasks", "grader", "inference"]
